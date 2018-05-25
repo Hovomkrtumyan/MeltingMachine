@@ -1,6 +1,6 @@
 {
   "name": "resin-electronjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "electronJS-based resin application",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resin-io/resin-electronjs.git"
+    "url": "https://github.com/Hovomkrtumyan/MeltingMachine.git"
   },
   "keywords": [
     "resin",
@@ -20,6 +20,7 @@
     "js"
   ],
   "dependencies": {
+    "chart.js": "^2.7.2",
     "electron": "~1.6.16",
     "electron-rebuild": "^1.7.2",
     "lockfile": "^1.0.4"
