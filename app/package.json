@@ -7,7 +7,7 @@
 
     "dev": "NODE_ENV=development electron .",
     "lint": "eslint .",
-    "start": "NODE_ENV=production startx ./node_modules/electron/dist/electron .",
+    "start": "NODE_ENV=production startx ./node_modules/electron/dist/electron . && dist/Chart.bundle.min.js",
     "local": "NODE_ENV=production electron ."
   },
   "repository": {
@@ -41,12 +41,6 @@
     "eslint": "^3.14.1",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0"
-  },
-  "overrides" : {
-    "chart.js": {
-       "main": [
-         "dist/Chart.bundle.min.js"
-       ]
-     }
   }
+
 }
