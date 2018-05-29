@@ -4,6 +4,7 @@
   "description": "electronJS-based resin application",
   "main": "main.js",
   "scripts": {
+
     "dev": "NODE_ENV=development electron .",
     "lint": "eslint .",
     "start": "NODE_ENV=production startx ./node_modules/electron/dist/electron .",
@@ -40,5 +41,12 @@
     "eslint": "^3.14.1",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0"
+  },
+  "overrides" : {
+    "chart.js": {
+       "main": [
+         "dist/Chart.bundle.min.js"
+       ]
+     }
   }
 }
