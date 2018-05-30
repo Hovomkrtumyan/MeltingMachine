@@ -1,4 +1,4 @@
-var Chart = require('chart.js');
+//var Chart = require('chart.js');
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
