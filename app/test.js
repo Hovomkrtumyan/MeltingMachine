@@ -1,7 +1,7 @@
 //var Chart = require('chart.js');
 
 var ctx = document.getElementById('myChart').getContext('2d');
-var maxlength=10;
+var maxlength=20;
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -18,18 +18,24 @@ var myChart = new Chart(ctx, {
     }
 });
 
+
 setInterval(delay, 1000);
 function delay(x) {
-    myChart.data.datasets[0].data.push(Math.floor(Math.random() * 50));
-    myChart.data.datasets[1].data.push(Math.floor(Math.random() * 50));
-    newdata:myChart.data.datasets[0].data;
-    if(myChart.data.datasets[0].data.length > maxlength) {
-        myChart.data.datasets[0].data.shift();
-    };
-    if(myChart.data.datasets[1].data.length > maxlength) {
-        myChart.data.datasets[1].data.shift();
-    };
-    myChart.data.labels.push(new Date().getSeconds());
-    
-    myChart.update();
+  var d = new Date();
+  var m = d.getMinutes();
+  var s = d.getSeconds();
+  var Time= m + ":" + s ;
+  myChart.data.datasets[0].data.push(Math.floor(Math.random() * 50));
+  myChart.data.datasets[1].data.push(Math.floor(Math.random() * 50));
+  myChart.data.labels.push(Time );
+  if(myChart.data.datasets[0].data.length > maxlength) {
+     myChart.data.datasets[0].data.splice(1,1);
+  };
+  if(myChart.data.datasets[1].data.length > maxlength) {
+     myChart.data.datasets[1].data.splice(1,1);
+  };
+  if (myChart.data.labels.length>maxlength){
+    myChart.data.labels.splice(1,1);
+  };
+  myChart.update();
 }
