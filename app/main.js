@@ -17,8 +17,8 @@ const electronConfig = {
   URL_LAUNCHER_FRAME: process.env.URL_LAUNCHER_FRAME === '1' ? 1 : 0,
   URL_LAUNCHER_KIOSK: process.env.URL_LAUNCHER_KIOSK === '1' ? 1 : 0,
   URL_LAUNCHER_NODE: process.env.URL_LAUNCHER_NODE === '1' ? 1 : 0,
-  URL_LAUNCHER_WIDTH: parseInt(process.env.URL_LAUNCHER_WIDTH || 1920, 10),
-  URL_LAUNCHER_HEIGHT: parseInt(process.env.URL_LAUNCHER_HEIGHT || 1080, 10),
+  URL_LAUNCHER_WIDTH: parseInt(process.env.URL_LAUNCHER_WIDTH || 800, 10),
+  URL_LAUNCHER_HEIGHT: parseInt(process.env.URL_LAUNCHER_HEIGHT || 600, 10),
   URL_LAUNCHER_TITLE: process.env.URL_LAUNCHER_TITLE || 'RESIN.IO',
   URL_LAUNCHER_CONSOLE: process.env.URL_LAUNCHER_CONSOLE === '1' ? 1 : 0,
   URL_LAUNCHER_URL: process.env.URL_LAUNCHER_URL || `file:///${path.join(__dirname, 'index.html')}`,
@@ -59,8 +59,8 @@ if (electronConfig.ELECTRON_USER_DATA_DIR) {
 if (process.env.NODE_ENV === 'development') {
   console.log('Running in development mode');
   Object.assign(electronConfig, {
-    URL_LAUNCHER_HEIGHT: 768,
-    URL_LAUNCHER_WIDTH: 1024,
+    URL_LAUNCHER_HEIGHT: 600,
+    URL_LAUNCHER_WIDTH: 800,
     URL_LAUNCHER_KIOSK: 0,
     URL_LAUNCHER_CONSOLE: 1,
     URL_LAUNCHER_FRAME: 1,
