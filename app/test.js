@@ -25,8 +25,8 @@ function delay(x) {
   var m = d.getMinutes();
   var s = d.getSeconds();
   var Time= m + ":" + s ;
-  myChart.data.datasets[0].data.push(Math.floor(Math.random() * 50));
-  myChart.data.datasets[1].data.push(Math.floor(Math.random() * 50));
+  myChart.data.datasets[0].data.push(Math.floor(Math.random() * 50 + 500));
+  myChart.data.datasets[1].data.push(Math.floor(Math.random() * 50 + 550));
   myChart.data.labels.push(Time );
   if(myChart.data.datasets[0].data.length > maxlength) {
      myChart.data.datasets[0].data.splice(1,1);
